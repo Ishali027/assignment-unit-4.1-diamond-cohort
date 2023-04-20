@@ -51,12 +51,22 @@ console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
 
+console.log('Is 3 positive?:', isPositive(3));
+console.log('Is 0 positive?:', isPositive(0));
+console.log('Is -3 positive?:', isPositive(-3));
+
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  if ( array.length === 0){
+    return undefined;
+  }else{
+    return array[array.length-1]
+  }
 }
+let fruits = ['apple', 'orange', 'grapes', 'melon']
+console.log(getLast(fruits));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
