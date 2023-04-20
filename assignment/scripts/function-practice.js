@@ -66,14 +66,25 @@ function getLast( array ) {
   }
 }
 let fruits = ['apple', 'orange', 'grapes', 'melon']
+let animals = [];
 console.log(getLast(fruits));
+console.log(getLast(animals));
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find( value, array ){
-  
+  for( let i=0; i<array.length; i++){
+    if( array[i] === value){
+      return true
+    }else{
+      return false;
+    }
+  }
 }
+console.log('Is apple in the array?', find('apple', fruits));
+console.log('Is pear in the array?', find('pear', fruits));
 
 // ----------------------
 // Stretch Goals
